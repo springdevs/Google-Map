@@ -269,7 +269,7 @@ class Maps
             "rest_controller_class" => "WP_REST_Posts_Controller",
             "has_archive" => false,
             "show_in_menu" => "gmaps",
-            "show_in_nav_menus" => true,
+            "show_in_nav_menus" => false,
             "exclude_from_search" => false,
             "capability_type" => "post",
             "map_meta_cap" => true,
