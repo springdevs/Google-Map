@@ -1,8 +1,8 @@
 <?php
 
-namespace springdevs\EasyGmap;
+namespace springdevs\Gmap;
 
-use springdevs\EasyGmap\Frontend\Shortcode;
+use springdevs\Gmap\Frontend\Shortcode;
 
 /**
  * Frontend handler class

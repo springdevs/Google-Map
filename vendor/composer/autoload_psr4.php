@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'springdevs\\EasyGmap\\' => array($baseDir . '/includes'),
+    'springdevs\\Gmap\\' => array($baseDir . '/includes'),
 );

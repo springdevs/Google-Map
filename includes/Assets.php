@@ -1,6 +1,6 @@
 <?php
 
-namespace springdevs\EasyGmap;
+namespace springdevs\Gmap;
 
 /**
  * Scripts and Styles Class

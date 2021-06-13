@@ -1,6 +1,6 @@
 <?php
 
-namespace springdevs\EasyGmap\Admin;
+namespace springdevs\Gmap\Admin;
 
 /**
  * The Settings class
@@ -38,7 +38,7 @@ class Settings
                         <tr>
                             <th scope="row">
                                 <label for="gmap_api_key">
-                                    <?php _e('Google Map API Key', 'sdevs_wea'); ?>
+                                    <?php _e('Google Map API Key', 'sdevs_gmap'); ?>
                                 </label>
                             </th>
                             <td>

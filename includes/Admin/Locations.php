@@ -1,6 +1,6 @@
 <?php
 
-namespace springdevs\EasyGmap\Admin;
+namespace springdevs\Gmap\Admin;
 
 /**
  * The Locations class
@@ -34,7 +34,7 @@ class Locations
             return;
         }
         if (!wp_verify_nonce($_POST["gmap_location_nonce"], "gmap_location_nonce")) {
-            wp_die(__('Sorry !! You cannot permit to access.', 'sdevs_wea'));
+            wp_die(__('Sorry !! You cannot permit to access.', 'sdevs_gmap'));
         }
 
         $lat = floatval($_POST["gmap_lat"]);
@@ -59,7 +59,7 @@ class Locations
     {
         add_meta_box(
             'gmap_locations_info',
-            __('Google Map Location Info', 'sdevs_wea'),
+            __('Google Map Location Info', 'sdevs_gmap'),
             [$this, 'gmap_metabox_screen'],
             'location',
             'normal',
@@ -67,7 +67,7 @@ class Locations
         );
         add_meta_box(
             'gmap_location_settings',
-            __('Settings', 'sdevs_wea'),
+            __('Settings', 'sdevs_gmap'),
             [$this, 'gmap_settings_screen'],
             'location',
             'normal',
@@ -154,25 +154,25 @@ class Locations
     public function gmap_post_type()
     {
         $labels = array(
-            "name" => __("Locations", "sdevs_wea"),
-            "singular_name" => __("Location", "sdevs_wea"),
-            'name_admin_bar'        => __('Location\'s', 'sdevs_wea'),
-            'archives'              => __('Item Archives', 'sdevs_wea'),
-            'attributes'            => __('Item Attributes', 'sdevs_wea'),
-            'parent_item_colon'     => __('Parent Location:', 'sdevs_wea'),
-            'all_items'             => __('Locations', 'sdevs_wea'),
-            'add_new_item'          => __('Add New Location', 'sdevs_wea'),
-            'add_new'               => __('Add Location', 'sdevs_wea'),
-            'new_item'              => __('New Location', 'sdevs_wea'),
-            'edit_item'             => __('Edit Location', 'sdevs_wea'),
-            'update_item'           => __('Update Location', 'sdevs_wea'),
-            'view_item'             => __('View Location', 'sdevs_wea'),
-            'view_items'            => __('View Locations', 'sdevs_wea'),
-            'search_items'          => __('Search Location', 'sdevs_wea'),
+            "name" => __("Locations", "sdevs_gmap"),
+            "singular_name" => __("Location", "sdevs_gmap"),
+            'name_admin_bar'        => __('Location\'s', 'sdevs_gmap'),
+            'archives'              => __('Item Archives', 'sdevs_gmap'),
+            'attributes'            => __('Item Attributes', 'sdevs_gmap'),
+            'parent_item_colon'     => __('Parent Location:', 'sdevs_gmap'),
+            'all_items'             => __('Locations', 'sdevs_gmap'),
+            'add_new_item'          => __('Add New Location', 'sdevs_gmap'),
+            'add_new'               => __('Add Location', 'sdevs_gmap'),
+            'new_item'              => __('New Location', 'sdevs_gmap'),
+            'edit_item'             => __('Edit Location', 'sdevs_gmap'),
+            'update_item'           => __('Update Location', 'sdevs_gmap'),
+            'view_item'             => __('View Location', 'sdevs_gmap'),
+            'view_items'            => __('View Locations', 'sdevs_gmap'),
+            'search_items'          => __('Search Location', 'sdevs_gmap'),
         );
 
         $args = array(
-            "label" => __("Locations", "sdevs_wea"),
+            "label" => __("Locations", "sdevs_gmap"),
             "labels" => $labels,
             "description" => "",
             "public" => true,

@@ -1,6 +1,6 @@
 <?php
 
-namespace springdevs\EasyGmap\Traits;
+namespace springdevs\Gmap\Traits;
 
 /**
  * Error handler trait

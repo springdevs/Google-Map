@@ -1,17 +1,17 @@
 <?php
 
-namespace springdevs\EasyGmap\Frontend;
+namespace springdevs\Gmap\Frontend;
 
 /**
  * Class Shortcode
- * @package EasyGmap\Gmap\Frontend
+ * @package Gmap\Gmap\Frontend
  */
 class Shortcode
 {
 
     public function __construct()
     {
-        add_shortcode('EasyGmap', [$this, 'render_maps']);
+        add_shortcode('Gmap', [$this, 'render_maps']);
         add_shortcode('EasyLocation', [$this, 'render_locations']);
     }
 

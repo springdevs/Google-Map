@@ -1,10 +1,10 @@
 <?php
 
-namespace springdevs\EasyGmap;
+namespace springdevs\Gmap;
 
-use springdevs\EasyGmap\Admin\Locations;
-use springdevs\EasyGmap\Admin\Maps;
-use springdevs\EasyGmap\Admin\Settings;
+use springdevs\Gmap\Admin\Locations;
+use springdevs\Gmap\Admin\Maps;
+use springdevs\Gmap\Admin\Settings;
 
 /**
  * The admin class

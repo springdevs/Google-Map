@@ -1,6 +1,6 @@
 <?php
 
-namespace springdevs\EasyGmap\Admin;
+namespace springdevs\Gmap\Admin;
 
 /**
  * The Maps class
@@ -23,7 +23,7 @@ class Maps
     public function gmap_columns_data($column, $post_id)
     {
         if ($column == "gmap_shortcode") {
-            echo "<pre class='sdwac_coupon_pre_column'>[EasyGmap id=\"" . $post_id . "\"]</pre>";
+            echo "<pre class='sdwac_coupon_pre_column'>[Gmap id=\"" . $post_id . "\"]</pre>";
         } else if ($column == "gmap_shortcode_locations") {
             echo "<pre class='sdwac_coupon_pre_column'>[EasyLocation id=\"" . $post_id . "\"]</pre>";
         }
@@ -34,8 +34,8 @@ class Maps
      **/
     public function gmap_custom_columns($columns)
     {
-        $columns['gmap_shortcode'] = __('Map ShortCode', 'sdevs_wea');
-        $columns['gmap_shortcode_locations'] = __('Location ShortCode', 'sdevs_wea');
+        $columns['gmap_shortcode'] = __('Map ShortCode', 'sdevs_gmap');
+        $columns['gmap_shortcode_locations'] = __('Location ShortCode', 'sdevs_gmap');
         $new = array();
         $gmap_shortcode = $columns['gmap_shortcode'];
         $gmap_shortcode_locations = $columns['gmap_shortcode_locations'];
@@ -58,7 +58,7 @@ class Maps
     public function gmap_save_meta_post($post_id)
     {
         if (!isset($_POST["gmaplocation"])) return;
-        if (!wp_verify_nonce($_POST["gmap_post_nonce"], "gmap_post_nonce")) wp_die(__('Sorry !! You cannot permit to access.', 'sdevs_wea'));
+        if (!wp_verify_nonce($_POST["gmap_post_nonce"], "gmap_post_nonce")) wp_die(__('Sorry !! You cannot permit to access.', 'sdevs_gmap'));
 
         $height = (int)$_POST["height"];
         $zoom = (int)$_POST["zoom"];
@@ -91,7 +91,7 @@ class Maps
     {
         add_meta_box(
             'gmap_post_info',
-            __('Select Locations', 'sdevs_wea'),
+            __('Select Locations', 'sdevs_gmap'),
             [$this, 'gmap_metabox_screen'],
             'gmap',
             'normal',
@@ -99,7 +99,7 @@ class Maps
         );
         add_meta_box(
             'gmap_setting_info',
-            __('Map Settings', 'sdevs_wea'),
+            __('Map Settings', 'sdevs_gmap'),
             [$this, 'gmap_settings_screen'],
             'gmap',
             'normal',
@@ -239,25 +239,25 @@ class Maps
     public function gmap_post_type()
     {
         $labels = array(
-            "name" => __("Gmaps", "sdevs_wea"),
-            "singular_name" => __("gmap", "sdevs_wea"),
-            'name_admin_bar'        => __('Gmap\'s', 'sdevs_wea'),
-            'archives'              => __('Item Archives', 'sdevs_wea'),
-            'attributes'            => __('Item Attributes', 'sdevs_wea'),
-            'parent_item_colon'     => __('Parent Gmap:', 'sdevs_wea'),
-            'all_items'             => __('Gmaps', 'sdevs_wea'),
-            'add_new_item'          => __('Add New Gmap', 'sdevs_wea'),
-            'add_new'               => __('Add Gmap', 'sdevs_wea'),
-            'new_item'              => __('New Gmap', 'sdevs_wea'),
-            'edit_item'             => __('Edit Gmap', 'sdevs_wea'),
-            'update_item'           => __('Update Gmap', 'sdevs_wea'),
-            'view_item'             => __('View Gmap', 'sdevs_wea'),
-            'view_items'            => __('View Gmaps', 'sdevs_wea'),
-            'search_items'          => __('Search Gmap', 'sdevs_wea'),
+            "name" => __("Gmaps", "sdevs_gmap"),
+            "singular_name" => __("gmap", "sdevs_gmap"),
+            'name_admin_bar'        => __('Gmap\'s', 'sdevs_gmap'),
+            'archives'              => __('Item Archives', 'sdevs_gmap'),
+            'attributes'            => __('Item Attributes', 'sdevs_gmap'),
+            'parent_item_colon'     => __('Parent Gmap:', 'sdevs_gmap'),
+            'all_items'             => __('Gmaps', 'sdevs_gmap'),
+            'add_new_item'          => __('Add New Gmap', 'sdevs_gmap'),
+            'add_new'               => __('Add Gmap', 'sdevs_gmap'),
+            'new_item'              => __('New Gmap', 'sdevs_gmap'),
+            'edit_item'             => __('Edit Gmap', 'sdevs_gmap'),
+            'update_item'           => __('Update Gmap', 'sdevs_gmap'),
+            'view_item'             => __('View Gmap', 'sdevs_gmap'),
+            'view_items'            => __('View Gmaps', 'sdevs_gmap'),
+            'search_items'          => __('Search Gmap', 'sdevs_gmap'),
         );
 
         $args = array(
-            "label" => __("Gmaps", "sdevs_wea"),
+            "label" => __("Gmaps", "sdevs_gmap"),
             "labels" => $labels,
             "description" => "",
             "public" => true,
